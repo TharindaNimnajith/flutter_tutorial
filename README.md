@@ -1,6 +1,6 @@
 # flutter_tutorial
 
-flutter tutorial
+flutter_tutorial
 
 ## Getting Started
 
