@@ -2,9 +2,9 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
+import 'apps/my_app.dart';
 // import 'apps/app_test.dart';
 // import 'apps/app.dart';
-import 'apps/my_app.dart';
 
 void main() {
   // runApp(MyApp());
