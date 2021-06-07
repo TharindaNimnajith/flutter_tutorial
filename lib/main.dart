@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  // runApp(App());
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
@@ -16,8 +17,51 @@ class AppTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text(
-        'Hello World!',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Test',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        brightness: Brightness.dark,
+      ),
+      home: HomeTest(),
+    );
+  }
+}
+
+class HomeTest extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Flutter Test',
+        ),
+      ),
+      body: Container(
+        color: Colors.blue,
+        width: double.infinity,
+        height: 200.0,
+        margin: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(30.0),
+        // padding: EdgeInsets.symmetric(
+        //     horizontal: 10.0,
+        //     vertical: 20.0,
+        // ),
+        // padding: EdgeInsets.only(
+        //   bottom: 10.0,
+        //   top: 10.0,
+        //   left: 10.0,
+        //   right: 10.0,
+        // ),
+        // padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+        // transform: Matrix4.rotationZ(0.2),
+        alignment: Alignment.bottomCenter,
+        child: Text(
+          'Flutter Tutorial',
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
       ),
     );
   }
@@ -47,11 +91,35 @@ class Home extends StatelessWidget {
       child: DefaultTabController(
         length: 4,
         child: Scaffold(
+          bottomNavigationBar: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(
+                  Icons.directions_bike,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.directions_boat,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.directions_car,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.directions_railway,
+                ),
+              ),
+            ],
+          ),
           appBar: AppBar(
             title: Text(
               'Learn Flutter',
             ),
-            elevation: 20.0,
+            elevation: 10.0,
             backgroundColor: Colors.green,
             // flexibleSpace: Image.asset(
             //   'assets/appbar.jpg',
@@ -118,28 +186,66 @@ class Home extends StatelessWidget {
 
 Widget tab1() {
   return Container(
-    child: Center(
-      child: Text(
-        'Tab 1',
-        style: TextStyle(
-          fontSize: 20.0,
-          color: Colors.lightGreen,
+    // width: double.infinity,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          'Column 1',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
         ),
-      ),
+        Text(
+          'Column 2',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
+        ),
+        Text(
+          'Column 3',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
+        ),
+      ],
     ),
   );
 }
 
 Widget tab2() {
   return Container(
-    child: Center(
-      child: Text(
-        'Tab 2',
-        style: TextStyle(
-          fontSize: 20.0,
-          color: Colors.lightGreen,
+    // width: double.infinity,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          'Row 1',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
         ),
-      ),
+        Text(
+          'Row 2',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
+        ),
+        Text(
+          'Row 3',
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.lightGreen,
+          ),
+        ),
+      ],
     ),
   );
 }
