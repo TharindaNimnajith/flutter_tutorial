@@ -19,7 +19,7 @@ class _FirstPageState extends State<FirstPage> {
 
   void _navigate() {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return SecondPage();
+      return SecondPage('String');
     }));
     // Navigator.of(context).pushNamed('/second_page');
   }

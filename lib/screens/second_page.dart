@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 
 import 'first_page.dart';
 
+// ignore: must_be_immutable
 class SecondPage extends StatefulWidget {
-  const SecondPage({Key? key}) : super(key: key);
+  String text = '';
+
+  SecondPage(String text) {
+    this.text = text;
+  }
+
+  // const SecondPage({Key? key}) : super(key: key);
 
   @override
   _SecondPageState createState() => _SecondPageState();
@@ -36,7 +43,7 @@ class _SecondPageState extends State<SecondPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Flutter Test',
+            widget.text,
           ),
           leading: IconButton(
             icon: Icon(

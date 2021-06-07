@@ -24,7 +24,7 @@ class NavigationApp extends StatelessWidget {
         // '/first_page': (context) => FirstPage(
         //       title: 'FirstPage',
         //     ),
-        '/second_page': (context) => SecondPage(),
+        '/second_page': (context) => SecondPage(''),
       },
     );
   }
