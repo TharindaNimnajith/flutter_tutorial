@@ -6,14 +6,16 @@ import 'package:flutter/foundation.dart';
 // import 'apps/app_test.dart';
 // import 'apps/app.dart';
 // import 'apps/navigation_app.dart';
-import 'apps/list_app.dart';
+// import 'apps/list_app.dart';
+import 'apps/list_tiles_app.dart';
 
 void main() {
   // runApp(MyApp());
   // runApp(AppTest());
   // runApp(App());
   // runApp(NavigationApp());
-  runApp(ListApp());
+  // runApp(ListApp());
+  // runApp(ListTilesApp());
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
@@ -21,7 +23,8 @@ void main() {
       // builder: (context) => AppTest(),
       // builder: (context) => App(),
       // builder: (context) => NavigationApp(),
-      builder: (context) => ListApp(),
+      // builder: (context) => ListApp(),
+      builder: (context) => ListTilesApp(),
     ),
   );
 }
