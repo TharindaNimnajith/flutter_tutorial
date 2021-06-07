@@ -19,6 +19,7 @@ class _SecondPageState extends State<SecondPage> {
         FirstPage(
           title: 'FirstPage',
         ));
+    // Navigator.of(context).pushNamed('/first_page');
   }
 
   void _increment() {
@@ -64,6 +65,7 @@ class _SecondPageState extends State<SecondPage> {
           // transform: Matrix4.rotationZ(0.2),
           // alignment: Alignment.center,
           child: Text(
+            // count.toString(),
             'Count: $count',
             style: TextStyle(
               fontSize: 20.0,
