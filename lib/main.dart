@@ -8,7 +8,8 @@ import 'package:flutter/foundation.dart';
 // import 'apps/navigation_app.dart';
 // import 'apps/list_app.dart';
 // import 'apps/list_tiles_app.dart';
-import 'apps/horizontal_list_app.dart';
+// import 'apps/horizontal_list_app.dart';
+import 'apps/list_builder_app.dart';
 
 void main() {
   // runApp(MyApp());
@@ -18,6 +19,7 @@ void main() {
   // runApp(ListApp());
   // runApp(ListTilesApp());
   // runApp(HorizontalListApp());
+  runApp(ListBuilderApp());
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
@@ -28,7 +30,8 @@ void main() {
       // builder: (context) => NavigationApp(),
       // builder: (context) => ListApp(),
       // builder: (context) => ListTilesApp(),
-      builder: (context) => HorizontalListApp(),
+      // builder: (context) => HorizontalListApp(),
+      builder: (context) => ListBuilderApp(),
     ),
   );
 }
