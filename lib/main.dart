@@ -9,7 +9,9 @@ import 'package:flutter/foundation.dart';
 // import 'apps/list_app.dart';
 // import 'apps/list_tiles_app.dart';
 // import 'apps/horizontal_list_app.dart';
-import 'apps/list_builder_app.dart';
+// import 'apps/list_builder_app.dart';
+// import 'apps/input_app.dart';
+import 'apps/forms_app.dart';
 
 void main() {
   // runApp(MyApp());
@@ -19,7 +21,9 @@ void main() {
   // runApp(ListApp());
   // runApp(ListTilesApp());
   // runApp(HorizontalListApp());
-  runApp(ListBuilderApp());
+  // runApp(ListBuilderApp());
+  // runApp(InputApp());
+  // runApp(FormsApp());
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
@@ -31,7 +35,9 @@ void main() {
       // builder: (context) => ListApp(),
       // builder: (context) => ListTilesApp(),
       // builder: (context) => HorizontalListApp(),
-      builder: (context) => ListBuilderApp(),
+      // builder: (context) => ListBuilderApp(),
+      // builder: (context) => InputApp(),
+      builder: (context) => FormsApp(),
     ),
   );
 }
