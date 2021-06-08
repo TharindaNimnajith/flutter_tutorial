@@ -11,20 +11,26 @@ class Async extends StatefulWidget {
 class _AsyncState extends State<Async> {
   // simulate network request
   void getData() async {
-    String email = await Future.delayed(Duration(seconds: 3), () {
-      return 'tharindarajapakshe@y7mail.com';
+    await Future.delayed(Duration(seconds: 3), () {
+      print('tharindarajapakshe@y7mail.com');
     });
-    String bio = await Future.delayed(Duration(seconds: 2), () {
-      return 'name: Tharinda, age: 23';
+    Future.delayed(Duration(seconds: 2), () {
+      print('name: Tharinda, age: 23');
     });
-    print(email + ' - ' + bio);
+    // String email = await Future.delayed(Duration(seconds: 3), () {
+    //   return 'tharindarajapakshe@y7mail.com';
+    // });
+    // Future<String> bio = Future.delayed(Duration(seconds: 2), () {
+    //   return 'name: Tharinda, age: 23';
+    // });
+    print('--- Stop ---');
   }
 
   @override
   void initState() {
     super.initState();
     getData();
-    print('');
+    print('--- End ---');
   }
 
   @override
@@ -49,7 +55,7 @@ class _AsyncState extends State<Async> {
               child: Text(
                 'Get Data',
               ),
-              onPressed: () {},
+              onPressed: getData,
             ),
           ],
         ),
